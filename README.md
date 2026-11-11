@@ -5,12 +5,12 @@
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
 [![Async](https://img.shields.io/badge/sync%20%2B%20async-httpx-5A45FF)](https://www.python-httpx.org)
 [![Ruff](https://img.shields.io/badge/lint-ruff-D7FF64?logo=ruff&logoColor=black)](https://docs.astral.sh/ruff)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/qiyascc/fazercards-python-sdk/blob/main/LICENSE)
 
 Typed Python client for the FazerCards reseller API. Game top-ups, gift cards, Telegram Stars and Premium, Steam wallet, orders and signed webhooks. Sync and async, with retry rules built so an order is never placed twice.
 
 ```bash
-pip install git+https://github.com/qiyascc/fazercards-python-sdk.git
+pip install fazercards-python-sdk
 ```
 
 ## Top up a game
@@ -67,7 +67,7 @@ if event.needs_lookup:
     order = fc.orders.get(event.order_id)
 ```
 
-The body is checked against `X-Webhook-Signature` (HMAC SHA256 of the raw body, `sha256=` prefix optional) in constant time. Set the address with `fc.account.set_webhook("https://shop.example/webhook/fazercards")`. See [examples/fastapi_webhook.py](examples/fastapi_webhook.py).
+The body is checked against `X-Webhook-Signature` (HMAC SHA256 of the raw body, `sha256=` prefix optional) in constant time. Set the address with `fc.account.set_webhook("https://shop.example/webhook/fazercards")`. See [examples/fastapi_webhook.py](https://github.com/qiyascc/fazercards-python-sdk/blob/main/examples/fastapi_webhook.py).
 
 ## Safety
 
@@ -107,12 +107,21 @@ Every top-up, gift card and Steam order carries an `Idempotency-Key`. Pass your 
 
 ## Config
 
-Pass values in code, or set `FAZERCARDS_API_KEY`, `FAZERCARDS_WEBHOOK_SECRET`, `FAZERCARDS_BASE_URL`, `FAZERCARDS_IDEMPOTENCY_PREFIX`, `FAZERCARDS_TIMEOUT`, `FAZERCARDS_MAX_RETRIES`, or put them in `fazercards.toml` ([example](examples/fazercards.toml)). Every path is a setting (`FAZERCARDS_ENDPOINTS__BALANCE=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`.
+Pass values in code, or set `FAZERCARDS_API_KEY`, `FAZERCARDS_WEBHOOK_SECRET`, `FAZERCARDS_BASE_URL`, `FAZERCARDS_IDEMPOTENCY_PREFIX`, `FAZERCARDS_TIMEOUT`, `FAZERCARDS_MAX_RETRIES`, or put them in `fazercards.toml` ([example](https://github.com/qiyascc/fazercards-python-sdk/blob/main/examples/fazercards.toml)). Every path is a setting (`FAZERCARDS_ENDPOINTS__BALANCE=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`.
 
 ## Develop
 
 ```bash
 pip install -e ".[dev]" && pytest && ruff check . && mypy src
 ```
+
+## Links
+
+- Source code: [github.com/qiyascc/fazercards-python-sdk](https://github.com/qiyascc/fazercards-python-sdk)
+- PyPI: [pypi.org/project/fazercards-python-sdk](https://pypi.org/project/fazercards-python-sdk/)
+- Project page: [theqiyas.cc/projects/fazercards-sdk](https://theqiyas.cc/projects/fazercards-sdk/)
+- Author: [Qiyas Sadıqov](https://theqiyas.cc), more projects at [theqiyas.cc](https://theqiyas.cc)
+
+## License
 
 MIT
