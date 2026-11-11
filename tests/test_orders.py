@@ -204,7 +204,7 @@ def test_steam(gw, fc):
     assert fc.steam.check_login("player_1").valid is True
     assert fc.steam.check_login("player_2").valid is None
     order = fc.steam.order("player_1", "19.50", "usd", idempotency_key="st-1")
-    assert gw.body() == {"steamLogin": "player_1", "currency": "USD", "amount": "19.5"}
+    assert gw.body() == {"steamLogin": "player_1", "currency": "USD", "amount": "19.50"}
     assert order.idempotency_key == "st-1" and gw.header("idempotency-key") == "st-1"
 
 

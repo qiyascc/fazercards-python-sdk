@@ -38,4 +38,4 @@ def amount(value: Amount, field: str = "amount") -> Decimal:
 
 
 def wire(value: Decimal) -> str:
-    return format(value.normalize(), "f")
+    return format(value.quantize(CENT), "f")
