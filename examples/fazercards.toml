@@ -1,0 +1,5 @@
+api_key = "your-api-key"
+webhook_secret = "your-webhook-secret"
+idempotency_prefix = "shop"
+timeout = 30
+max_retries = 2

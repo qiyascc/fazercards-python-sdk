@@ -1,0 +1,48 @@
+settings:
+  description: Settings for the FazerCards client. Values come from code, FAZERCARDS_* environment variables or a config file.
+  api_key: Reseller API key, sent as X-API-Key
+  base_url: API address, including the version path
+  endpoints: Path of every API call, relative to base_url
+  webhook_secret: Secret used to check the X-Webhook-Signature header of webhooks
+  idempotency_prefix: Text put in front of every Idempotency-Key, to keep two shops on one account apart
+  timeout: Seconds to wait for an answer
+  connect_timeout: Seconds to wait for a connection
+  max_retries: Extra attempts for calls that are safe to repeat
+  backoff_base: First wait between retries, in seconds
+  backoff_cap: Longest wait between retries, in seconds
+  resend_keyed_orders: Resend an order once with the same Idempotency-Key after a timeout or a 5xx
+  code_checks: Extra reads of a gift card order that came back completed without codes
+  code_check_wait: Seconds between those reads
+  user_agent: User-Agent header
+  allow_insecure_http: Allow a plain http base_url outside localhost, for a test server on a private network only
+
+value:
+  empty: "{field} cannot be empty"
+  too_long: "{field} is longer than {limit} characters"
+  range: "{field} must be a whole number from {low} to {high}, got {value!r}"
+  choice: "{field} must be one of {choices}, got {value!r}"
+  amount_type: "{field} must be a number, got {value!r}"
+  amount_positive: "{field} must be greater than zero, got {value}"
+  amount_scale: "{field} {value} has more than two decimal places"
+  amount_finite: "{field} must be a finite number, got {value}"
+  order_id: "order_id must look like ord-123, got {value!r}"
+  fields: "fields must map names to text, got {value!r}"
+  username: "username must be a Telegram username of 4 to 32 letters, digits or _, got {value!r}"
+  url: "url must be an absolute https address, got {value!r}"
+
+error:
+  missing_key: FazerCards api_key is required
+  missing_secret: FazerCards webhook_secret is required to check webhooks
+  base_url: "base_url must be an absolute http or https address, got {url}"
+  insecure: "Refusing to send the API key over plain http to {url}. Use https, or set allow_insecure_http for a private test server."
+  connect: "Could not reach FazerCards, nothing was sent: {error}"
+  timeout: "FazerCards did not answer: {error}"
+  unknown_outcome: "The order may or may not have been placed ({reason}). Look it up before trying again."
+  body: "FazerCards sent an answer that is not JSON: {body}"
+  status: "FazerCards answered with HTTP {status}"
+  refused: FazerCards refused the request
+  collision: "Idempotency-Key {idempotency_key} already belongs to order {order_id} for a different item"
+  signature: Webhook signature does not match
+  payload_size: "Webhook body is larger than {limit} bytes"
+  payload: Webhook body is not a JSON object
+  wait_timeout: "Order {order_id} is still {status} after {seconds} seconds"
