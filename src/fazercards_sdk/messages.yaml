@@ -25,7 +25,7 @@ value:
   amount_positive: "{field} must be greater than zero, got {value}"
   amount_scale: "{field} {value} has more than two decimal places"
   amount_finite: "{field} must be a finite number, got {value}"
-  order_id: "order_id must look like ord-123, got {value!r}"
+  order_id: "order_id must be a FazerCards order id such as ord-123, got {value!r}"
   fields: "fields must map names to text, got {value!r}"
   username: "username must be a Telegram username of 4 to 32 letters, digits or _, got {value!r}"
   url: "url must be an absolute https address, got {value!r}"

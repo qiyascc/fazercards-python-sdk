@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- `orders.get` leaves the id format to the API and only refuses an empty id or one that would change the path
+- Steam amounts always go out with two decimals
+
 ## 0.1.0
 
 - Sync `FazerCards` and async `AsyncFazerCards`

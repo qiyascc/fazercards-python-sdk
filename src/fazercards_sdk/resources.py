@@ -29,7 +29,6 @@ from .models import (
 )
 from .money import Amount, amount, wire
 
-ORDER_ID = re.compile(r"^ord-[0-9]+$")
 USERNAME = re.compile(r"^@?([A-Za-z0-9_]{4,32})$")
 CATEGORY_PAGE_MAX = 500
 ORDER_PAGE_MAX = 100
@@ -56,8 +55,8 @@ def whole(value: Any, name: str, low: int, high: int) -> int:
 
 
 def order_id(value: Any) -> str:
-    result = str(value or "").strip()
-    if not ORDER_ID.match(result):
+    result = required(value, "order_id", 64)
+    if "/" in result or "?" in result:
         raise InvalidRequestError(text("value.order_id", value=value))
     return result
 

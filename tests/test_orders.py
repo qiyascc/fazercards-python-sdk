@@ -103,9 +103,10 @@ def test_get_order(gw, fc):
     assert gw.paths == ["/api/v2/orders/ord-1001"]
 
 
-def test_order_id_shape_is_checked_before_sending(gw, fc):
+@pytest.mark.parametrize("bad", ["", "  ", "ord-1/../balance", "ord-1?x=1"])
+def test_order_id_is_checked_before_sending(gw, fc, bad):
     with pytest.raises(InvalidRequestError):
-        fc.orders.get("does-not-exist")
+        fc.orders.get(bad)
     assert gw.requests == []
 
 
