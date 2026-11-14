@@ -1,6 +1,7 @@
 # fazercards-python-sdk
 
 [![PyPI](https://img.shields.io/pypi/v/fazercards-python-sdk?color=3775A9&logo=pypi&logoColor=white)](https://pypi.org/project/fazercards-python-sdk/)
+[![Docs](https://readthedocs.org/projects/fazercards-python-sdk/badge/?version=latest)](https://fazercards-python-sdk.readthedocs.io/en/latest/)
 [![Python](https://img.shields.io/badge/python-3.10%20to%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![FazerCards](https://img.shields.io/badge/api-FazerCards%20v2-7C3AED)](https://api.fzr.cards/api/v2)
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
@@ -118,6 +119,7 @@ pip install -e ".[dev]" && pytest && ruff check . && mypy src
 
 ## Links
 
+- Documentation: [fazercards-python-sdk.readthedocs.io](https://fazercards-python-sdk.readthedocs.io/)
 - Source code: [github.com/qiyascc/fazercards-python-sdk](https://github.com/qiyascc/fazercards-python-sdk)
 - PyPI: [pypi.org/project/fazercards-python-sdk](https://pypi.org/project/fazercards-python-sdk/)
 - Project page: [theqiyas.cc/projects/fazercards-sdk](https://theqiyas.cc/projects/fazercards-sdk/)

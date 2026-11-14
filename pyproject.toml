@@ -33,6 +33,7 @@ dev = ["fazercards-python-sdk[toml,yaml]", "pytest>=7", "pytest-asyncio>=0.21", 
 
 [project.urls]
 Homepage = "https://theqiyas.cc/projects/fazercards-sdk/"
+Documentation = "https://fazercards-python-sdk.readthedocs.io/"
 Source = "https://github.com/qiyascc/fazercards-python-sdk"
 Author = "https://theqiyas.cc"
 Issues = "https://github.com/qiyascc/fazercards-python-sdk/issues"
