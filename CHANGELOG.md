@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Project and author links point to qiyas.cc, the new address of the site. No code changes.
+
 ## 0.1.1
 
 - `orders.get` leaves the id format to the API and only refuses an empty id or one that would change the path
