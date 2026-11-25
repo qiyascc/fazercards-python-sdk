@@ -13,8 +13,8 @@ PACKAGE = "fazercards_sdk"
 DIST = "fazercards-python-sdk"
 TITLE = "FazerCards Python SDK"
 REPO = "https://github.com/qiyascc/fazercards-python-sdk"
-SITE = "https://theqiyas.cc"
-PROJECT_PAGE = "https://theqiyas.cc/projects/fazercards-sdk/"
+SITE = "https://qiyas.cc"
+PROJECT_PAGE = "https://qiyas.cc/projects/fazercards-sdk/"
 
 from fazercards_sdk import __version__ as release
 
@@ -93,6 +93,6 @@ html_theme_options = {
     "footer_icons": [
         {"name": "GitHub", "url": REPO, "html": GITHUB, "class": ""},
         {"name": "PyPI", "url": f"https://pypi.org/project/{DIST}/", "html": PYPI, "class": ""},
-        {"name": "theqiyas.cc", "url": SITE, "html": GLOBE, "class": ""},
+        {"name": "qiyas.cc", "url": SITE, "html": GLOBE, "class": ""},
     ],
 }

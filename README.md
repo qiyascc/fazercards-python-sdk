@@ -122,8 +122,8 @@ pip install -e ".[dev]" && pytest && ruff check . && mypy src
 - Documentation: [fazercards-python-sdk.readthedocs.io](https://fazercards-python-sdk.readthedocs.io/)
 - Source code: [github.com/qiyascc/fazercards-python-sdk](https://github.com/qiyascc/fazercards-python-sdk)
 - PyPI: [pypi.org/project/fazercards-python-sdk](https://pypi.org/project/fazercards-python-sdk/)
-- Project page: [theqiyas.cc/projects/fazercards-sdk](https://theqiyas.cc/projects/fazercards-sdk/)
-- Author: [Qiyas Sadıqov](https://theqiyas.cc), more projects at [theqiyas.cc](https://theqiyas.cc)
+- Project page: [qiyas.cc/projects/fazercards-sdk](https://qiyas.cc/projects/fazercards-sdk/)
+- Author: [Qiyas Sadıqov](https://qiyas.cc), more projects at [qiyas.cc](https://qiyas.cc)
 
 ## License
 

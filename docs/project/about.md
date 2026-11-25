@@ -4,10 +4,10 @@ FazerCards Python SDK is a typed client for the FazerCards reseller API, written
 
 ## Author
 
-The SDK is written and maintained by **Qiyas Sadıqov**. More of his work, including the other libraries listed below, is on [theqiyas.cc](https://theqiyas.cc).
+The SDK is written and maintained by **Qiyas Sadıqov**. More of his work, including the other libraries listed below, is on [qiyas.cc](https://qiyas.cc).
 
-- Website: [theqiyas.cc](https://theqiyas.cc)
-- Project page: [theqiyas.cc/projects/fazercards-sdk](https://theqiyas.cc/projects/fazercards-sdk/)
+- Website: [qiyas.cc](https://qiyas.cc)
+- Project page: [qiyas.cc/projects/fazercards-sdk](https://qiyas.cc/projects/fazercards-sdk/)
 - GitHub: [github.com/qiyascc](https://github.com/qiyascc)
 
 ## Links
